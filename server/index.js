@@ -17,12 +17,11 @@ mongoose.connect(process.env.URI, {
   useUnifiedTopology: true,
 });
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(__dirname + '/public'));
+}
 
-const __dirnameBase = path.resolve();
-app.use(express.static(path.join(__dirnameBase, 'client/dist')));
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirnameBase, 'client/dist', 'index.html'));
-});
+app.get(/.*/, (req, res) => res.sendFile(__dirname + 'public/index.html'));
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server started on port ${port}`));
