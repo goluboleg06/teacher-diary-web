@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongodb": "^6.16.0",
+    "mongoose": "^8.15.1"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^4.0.0",
+    "@storybook/addon-a11y": "^9.0.5",
+    "@storybook/addon-onboarding": "^9.0.5",
+    "@storybook/addon-vitest": "^9.0.5",
+    "@storybook/vue3-vite": "^9.0.5",
+    "@vitejs/plugin-vue": "^5.2.4",
+    "@vitest/browser": "^3.2.2",
+    "@vitest/coverage-v8": "^3.2.2",
+    "nodemon": "^3.1.10",
+    "playwright": "^1.52.0",
+    "vitest": "^3.2.2"
+  }
+}
